@@ -16,8 +16,14 @@ Esta pasta (`tripee-docs/`) contém toda a estrutura necessária:
 ```
 tripee-docs/
 ├── _config.yml            # Configuração do Jekyll/GitHub Pages
-├── index.html             # Página inicial (HTML estático)
+├── index.md               # Página inicial (Markdown)
+├── index.html.backup      # Backup do HTML original
 ├── README.md              # Documentação do repositório
+├── _layouts/
+│   └── default.html       # Layout customizado
+├── assets/
+│   └── css/
+│       └── style.css      # Estilos customizados
 └── docs/
     ├── authentication.md  # Guia de autenticação
     ├── trip-creation.md   # Guia de criação de trips
@@ -67,25 +73,32 @@ https://SEU_USUARIO.github.io/tripee-api-docs/
 
 ## 🎨 Personalizações
 
-### Alterar o Tema (Opcional)
+### Estilos Customizados
 
-Se quiser usar os temas do Jekyll em vez do HTML customizado:
+A documentação usa um layout customizado com estilos consistentes:
 
-1. Edite o arquivo `_config.yml`
-2. Altere a linha `theme:` para um dos temas disponíveis:
-   - `jekyll-theme-cayman`
-   - `jekyll-theme-minimal`
-   - `jekyll-theme-slate`
-   - `jekyll-theme-architect`
-   - Outros: https://pages.github.com/themes/
+- **Layout**: `_layouts/default.html` - Define a estrutura HTML de todas as páginas
+- **Estilos**: `assets/css/style.css` - CSS customizado que mantém o visual consistente
 
-### Usar Markdown em Vez de HTML
+Para alterar cores, fontes ou layout:
+1. Edite `assets/css/style.css` para mudanças de estilo
+2. Edite `_layouts/default.html` para mudanças estruturais
 
-Se preferir que o `index.html` seja gerado a partir de Markdown:
+### Variáveis CSS
 
-1. Renomeie `index.html` para `index.html.bak`
-2. Crie um arquivo `index.md` com o conteúdo desejado
-3. O Jekyll irá gerar automaticamente o HTML
+As cores principais estão definidas como variáveis CSS no início do `style.css`:
+
+```css
+:root {
+    --primary-color: #2563eb;     /* Azul principal */
+    --secondary-color: #1e40af;   /* Azul secundário */
+    --text-color: #1f2937;        /* Cor do texto */
+    --bg-color: #f9fafb;          /* Cor de fundo */
+    --border-color: #e5e7eb;      /* Cor das bordas */
+}
+```
+
+Basta alterar essas variáveis para mudar o esquema de cores de toda a documentação.
 
 ## 📝 Atualizando a Documentação
 

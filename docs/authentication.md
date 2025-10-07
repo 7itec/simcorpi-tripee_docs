@@ -1,3 +1,8 @@
+---
+layout: default
+title: Autenticação
+---
+
 # Autenticação
 
 A API Tripee utiliza autenticação via **Azure Active Directory (Azure AD)** e tokens JWT para autorização de requisições.

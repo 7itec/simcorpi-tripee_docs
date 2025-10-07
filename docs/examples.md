@@ -1,3 +1,8 @@
+---
+layout: default
+title: Exemplos de Código
+---
+
 # Exemplos de Código
 
 Esta seção fornece exemplos práticos de integração com a API Tripee em diferentes linguagens e frameworks.

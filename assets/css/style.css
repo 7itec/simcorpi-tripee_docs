@@ -1,0 +1,447 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #1f2937;
+    --bg-color: #f9fafb;
+    --border-color: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.nav {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    margin: 0.75rem 0;
+}
+
+.nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Conteúdo principal das páginas Markdown */
+.content {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.content h2 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    font-size: 2rem;
+}
+
+.content h3 {
+    color: var(--secondary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.content h4 {
+    color: var(--text-color);
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.content ul, .content ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content li {
+    margin: 0.5rem 0;
+}
+
+.content blockquote {
+    background: var(--bg-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+}
+
+.content th,
+.content td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content th {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.content tr:hover {
+    background: var(--bg-color);
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.content a:hover {
+    border-bottom-color: var(--primary-color);
+}
+
+.content hr {
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: 2rem 0;
+}
+
+/* Código inline */
+.content code {
+    background: #f3f4f6;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #d63384;
+}
+
+/* Blocos de código */
+.content pre {
+    background: #1f2937;
+    color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.content pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Sintaxe highlighting para JSON */
+.content .language-json,
+.content .language-javascript,
+.content .language-typescript,
+.content .language-python,
+.content .language-bash {
+    position: relative;
+}
+
+/* Labels para linguagens */
+.content pre[class*="language-"]::before {
+    content: attr(class);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+}
+
+/* Métodos HTTP */
+.content .method {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.content .method.get { background: #10b981; color: white; }
+.content .method.post { background: #3b82f6; color: white; }
+.content .method.patch { background: #f59e0b; color: white; }
+.content .method.delete { background: #ef4444; color: white; }
+
+/* Badges */
+.content .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.content .badge.required { background: #fee2e2; color: #991b1b; }
+.content .badge.optional { background: #dbeafe; color: #1e40af; }
+
+/* Avisos e alertas */
+.content p:has(strong:first-child) {
+    background: var(--bg-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+/* Para seções específicas na página principal */
+.section {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.section h3 {
+    color: var(--secondary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.section p {
+    margin-bottom: 1rem;
+}
+
+.section ul, .section ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section li {
+    margin: 0.5rem 0;
+}
+
+.card {
+    background: var(--bg-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.endpoint {
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.emoji {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    color: #6b7280;
+}
+
+/* Navegação entre páginas */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.page-nav a {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.page-nav a:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content h3 {
+        font-size: 1.25rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .page-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .content pre {
+        font-size: 0.8rem;
+    }
+}
+
+/* Melhorias para listas de tarefas */
+.content input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.content li:has(input[type="checkbox"]) {
+    list-style: none;
+    margin-left: -1.5rem;
+}
+
+/* Estilo para diagramas em texto */
+.content pre:has(code:contains("┌")),
+.content pre:has(code:contains("│")),
+.content pre:has(code:contains("└")) {
+    background: white;
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+}
