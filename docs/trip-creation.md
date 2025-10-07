@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Criação de Solicitações
+permalink: /docs/trip-creation.html
 ---
 
 # Criação de Solicitações de Transporte

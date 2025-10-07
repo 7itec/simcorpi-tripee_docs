@@ -1,0 +1,56 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║   🚨 ATENÇÃO: CONFIGURAÇÃO NECESSÁRIA PARA GITHUB PAGES     ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+Antes de fazer deploy, você PRECISA ajustar uma linha no arquivo:
+
+   📁 _config.yml
+
+┌──────────────────────────────────────────────────────────────┐
+│  PASSO 1: Descubra o nome do seu repositório                │
+│                                                              │
+│  Olhe a URL do GitHub:                                       │
+│  https://github.com/wilsonjnr665/NOME-DO-REPO              │
+│                                    ^^^^^^^^^^^^              │
+│                                    Copie isso!               │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│  PASSO 2: Abra _config.yml e edite a linha:                 │
+│                                                              │
+│  baseurl: "/tripee-docs"    ← Mude para /SEU-REPO-AQUI     │
+│                                                              │
+│  Exemplos:                                                   │
+│  • Repo: tripee-api-docs   → baseurl: "/tripee-api-docs"   │
+│  • Repo: docs              → baseurl: "/docs"              │
+│  • Repo: username.github.io → baseurl: ""                  │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│  PASSO 3: Commit e Push                                      │
+│                                                              │
+│  $ git add _config.yml                                       │
+│  $ git commit -m "Configure baseurl"                         │
+│  $ git push                                                  │
+│                                                              │
+│  Aguarde 2-3 minutos e recarregue a página!                 │
+└──────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════
+
+🎯 MÉTODO AUTOMÁTICO (se já configurou o git remote):
+
+   $ ./configure-github-pages.sh
+
+   Este script detecta e configura automaticamente!
+
+═══════════════════════════════════════════════════════════════
+
+📚 Para mais detalhes, consulte:
+   • QUICK_FIX.md         - Solução rápida (LEIA PRIMEIRO!)
+   • GITHUB_PAGES_FIX.md  - Guia completo
+   • SETUP_GUIDE.md       - Instruções de deploy
+
+═══════════════════════════════════════════════════════════════

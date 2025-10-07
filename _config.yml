@@ -2,8 +2,12 @@ title: Tripee API Documentation
 description: Documentação oficial da API de integração Tripee para gerenciamento de solicitações de transporte
 
 # GitHub Pages Configuration
-baseurl: ""
-url: ""
+# ⚠️ IMPORTANTE: Ajuste o baseurl com o nome REAL do seu repositório!
+# Se o repo é: https://github.com/usuario/meu-repo
+# Então: baseurl: "/meu-repo"
+# Se for username.github.io, deixe: baseurl: ""
+baseurl: "/tripee-doc"  # ← AJUSTE AQUI COM O NOME DO SEU REPOSITÓRIO
+url: "https://wilsonjnr665.github.io"
 
 # Build settings
 markdown: kramdown

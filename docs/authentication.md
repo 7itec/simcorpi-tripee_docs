@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Autenticação
+permalink: /docs/authentication.html
 ---
 
 # Autenticação

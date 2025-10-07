@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Exemplos de Código
+permalink: /docs/examples.html
 ---
 
 # Exemplos de Código

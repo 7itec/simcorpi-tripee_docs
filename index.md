@@ -122,9 +122,9 @@ title: Home
 <div class="section">
   <h2>📖 Recursos Adicionais</h2>
   <ul>
-    <li>📘 <a href="{{ '/docs/authentication' | relative_url }}">Guia Completo de Autenticação</a></li>
-    <li>📗 <a href="{{ '/docs/trip-creation' | relative_url }}">Tutorial: Criando sua Primeira Solicitação</a></li>
-    <li>📙 <a href="{{ '/docs/examples' | relative_url }}">Exemplos em Múltiplas Linguagens</a></li>
+    <li>📘 <a href="{{ '/docs/authentication.html' | relative_url }}">Guia Completo de Autenticação</a></li>
+    <li>📗 <a href="{{ '/docs/trip-creation.html' | relative_url }}">Tutorial: Criando sua Primeira Solicitação</a></li>
+    <li>📙 <a href="{{ '/docs/examples.html' | relative_url }}">Exemplos em Múltiplas Linguagens</a></li>
   </ul>
 </div>
 
