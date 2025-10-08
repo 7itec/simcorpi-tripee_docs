@@ -1,10 +1,10 @@
-title: Tripee API Documentation
-description: Documentação oficial da API de integração Tripee para gerenciamento de solicitações de transporte
+title: Simcorpi integration with Tripee - API Documentation
+description: Documentação oficial da API do Simcorpi para integração da Tripee para gerenciamento de solicitações de transporte
 
 # GitHub Pages Configuration
 # ⚠️ IMPORTANTE: A barra / no início do baseurl é obrigatória!
-baseurl: "/tripee-doc"
-url: "https://wilsonjnr665.github.io"
+baseurl: "/simcorpi-tripee_docs"
+url: "https://7itec.github.io"
 
 # Build settings
 markdown: kramdown
@@ -12,6 +12,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
   auto_ids: true
+  parse_block_html: true
 
 # Plugins
 plugins:

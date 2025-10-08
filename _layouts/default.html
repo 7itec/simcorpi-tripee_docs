@@ -3,27 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Tripee API Documentation</title>
+    <title>{{ page.title }} | Simcorpi Tripee Integration API Documentation</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>🚗 Tripee API Documentation</h1>
+            <h1>🚗 Simcorpi Tripee Integration API Documentation</h1>
             <p>API de Integração para Gerenciamento de Solicitações de Transporte</p>
         </div>
     </header>
 
     <div class="container">
+        {% if page.url != "/" %}
+        <nav class="breadcrumb">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <span class="separator">›</span>
+            <span class="current">{{ page.title }}</span>
+        </nav>
+        {% endif %}
+
         <div class="nav">
             <h2>📚 Documentação</h2>
-            <ul>
-                <li><a href="{{ '/' | relative_url }}">🏠 Home</a></li>
-                <li><a href="{{ '/docs/authentication.html' | relative_url }}">🔐 Autenticação</a></li>
-                <li><a href="{{ '/docs/trip-creation.html' | relative_url }}">✈️ Criação de Solicitações</a></li>
-                <li><a href="{{ '/docs/examples.html' | relative_url }}">💻 Exemplos de Código</a></li>
-            </ul>
+            <div class="nav-grid">
+                <a href="{{ '/' | relative_url }}" class="nav-card">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-title">Home</span>
+                </a>
+                <a href="{{ '/docs/authentication.html' | relative_url }}" class="nav-card">
+                    <span class="nav-icon">🔐</span>
+                    <span class="nav-title">Autenticação</span>
+                </a>
+                <a href="{{ '/docs/trip-creation.html' | relative_url }}" class="nav-card">
+                    <span class="nav-icon">➕</span>
+                    <span class="nav-title">Criar Solicitação</span>
+                </a>
+                <a href="{{ '/docs/trip-edit.html' | relative_url }}" class="nav-card">
+                    <span class="nav-icon">✏️</span>
+                    <span class="nav-title">Editar Solicitação</span>
+                </a>
+                <a href="{{ '/docs/trip-job-link.html' | relative_url }}" class="nav-card">
+                    <span class="nav-icon">🔗</span>
+                    <span class="nav-title">Vínculo com Atendimento</span>
+                </a>
+                <a href="{{ '/docs/trip-list.html' | relative_url }}" class="nav-card">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-title">Listar Solicitações</span>
+                </a>
+                <a href="{{ '/docs/trip-status.html' | relative_url }}" class="nav-card">
+                    <span class="nav-icon">🔄</span>
+                    <span class="nav-title">Status da Solicitação</span>
+                </a>
+                <a href="{{ '/docs/job-status.html' | relative_url }}" class="nav-card">
+                    <span class="nav-icon">🚦</span>
+                    <span class="nav-title">Status do Atendimento</span>
+                </a>
+            </div>
         </div>
 
         <main class="content">
@@ -32,8 +68,84 @@
     </div>
 
     <footer>
-        <p>© 2025 Tripee API Documentation | Versão 1.0.0</p>
-        <p>Última atualização: Outubro 2025</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🚗 Simcorpi API</h3>
+                <p>Solução completa para gerenciamento de transporte</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li><a href="{{ '/docs/authentication.html' | relative_url }}">Autenticação</a></li>
+                    <li><a href="{{ '/docs/trip-creation.html' | relative_url }}">Criar Solicitação</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Informações</h4>
+                <p>Versão 1.0.0</p>
+                <p>Última atualização: Outubro 2025</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Simcorpi. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+    <script>
+        // Destaca o card de navegação ativo
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const navCards = document.querySelectorAll('.nav-card');
+            
+            navCards.forEach(card => {
+                const cardPath = new URL(card.href).pathname;
+                if (currentPath === cardPath || (currentPath.endsWith('/') && cardPath.endsWith('index.html'))) {
+                    card.classList.add('active');
+                }
+            });
+
+            // Funcionalidade de scroll to top
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Adiciona animação de entrada aos elementos
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.content h2, .content h3').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>

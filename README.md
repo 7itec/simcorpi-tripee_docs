@@ -1,79 +1,149 @@
-# Tripee API Documentation
+# 🚗 Simcorpi Tripee Integration API Documentation
 
-Documentação oficial da API de integração Tripee.
+Documentação oficial da api do Simcorpi para integração com a Tripee, focada no gerenciamento de solicitações de transporte.
 
-## 📝 Sobre
+## 📖 Sobre
 
-Esta documentação foi criada para facilitar a integração com a API Tripee, que gerencia solicitações de transporte de pessoal.
+Este repositório contém a documentação completa para gerenciamento de solicitações de transporte, construída com Jekyll e hospedada no GitHub Pages. A documentação fornece informações detalhadas sobre autenticação, criação, edição e gerenciamento completo de solicitações de transporte.
 
-## � Visualizar a Documentação
+## 🚀 Desenvolvimento Local
 
-### Localmente
+### Pré-requisitos
 
-1. Clone este repositório
-2. Abra o arquivo `index.html` em seu navegador
+- Ruby (versão 2.7 ou superior)
+- Bundler
+- Jekyll
 
-### GitHub Pages
+### Instalação
 
-Acesse: [URL_DO_SEU_GITHUB_PAGES]
+```bash
+# Instalar dependências
+bundle install
 
-## 📂 Estrutura
+# Executar servidor local
+bundle exec jekyll serve
 
-```
-tripee-docs/
-├── index.html              # Página inicial
-├── docs/
-│   ├── authentication.md   # Guia de autenticação
-│   ├── trip-creation.md    # Guia de criação de solicitações
-│   └── examples.md         # Exemplos de código
-└── README.md              # Este arquivo
+# Acessar em: http://localhost:4000
 ```
 
-## � Conteúdo
+## 📁 Estrutura do Projeto
 
-- **Autenticação**: Guia completo sobre autenticação via Azure AD, gerenciamento de tokens JWT, refresh e logout
-- **Criação de Solicitações**: Tutorial passo a passo para criar solicitações de transporte
-- **Exemplos de Código**: Implementações práticas em JavaScript/TypeScript, Python e cURL
+```
+simcorpi-tripee_docss/
+├── _layouts/           # Templates do site
+│   └── default.html    # Layout principal
+├── assets/            # Recursos estáticos
+│   └── css/          # Folhas de estilo
+├── docs/             # Documentação da API
+│   ├── authentication.md
+│   ├── trip-creation.md
+│   ├── trip-edit.md
+│   ├── trip-job-link.md
+│   ├── trip-list.md
+│   ├── trip-status.md
+│   └── job-status.md
+├── index.md          # Página inicial
+├── _config.yml       # Configuração do Jekyll
+└── Gemfile          # Dependências Ruby
+```
 
-## 🛠️ Tecnologias
+## 🎨 Características
 
-- HTML5
-- CSS3
-- Markdown
-- GitHub Pages (para hospedagem)
+- ✅ Design moderno e responsivo
+- ✅ Navegação intuitiva em grid
+- ✅ Breadcrumbs para navegação contextual
+- ✅ Botão de scroll to top
+- ✅ Animações suaves e transições
+- ✅ Destaque da página ativa
+- ✅ Suporte a dark mode (automático)
+- ✅ Otimizado para impressão
+- ✅ Acessibilidade aprimorada (WCAG)
+- ✅ Footer informativo e organizado
+- ✅ Emojis específicos para cada seção
 
-## 📖 Como Usar
+## 🌐 Visualizar Documentação
 
-### Para Desenvolvedores que Vão Integrar
+### Produção (GitHub Pages)
+Acesse: `https://7itec.github.io/simcorpi-tripee_docs/`
 
-1. Comece lendo a documentação de [Autenticação](docs/authentication.md)
-2. Depois, siga o guia de [Criação de Solicitações](docs/trip-creation.md)
-3. Confira os [Exemplos de Código](docs/examples.md) na sua linguagem preferida
+### Desenvolvimento Local
+```bash
+# 1. Clone o repositório
+git clone https://github.com/7itec/simcorpi-tripee_docs.git
+cd simcorpi-tripee_docs
 
-### Para Contribuidores
+# 2. Instale as dependências
+bundle install
 
-1. Faça um fork deste repositório
+# 3. Execute o servidor local
+bundle exec jekyll serve
+
+# 4. Acesse em seu navegador
+# http://localhost:4000
+```
+
+## 📚 Conteúdo da Documentação
+
+### 🔐 Autenticação
+Guia completo sobre autenticação via Azure AD, gerenciamento de tokens JWT, refresh e logout.
+
+### ➕ Criar Solicitação
+Processo completo para criar solicitações de transporte, incluindo centros de planejamento e tipos de viagem.
+
+### ✏️ Editar Solicitação
+Como editar solicitações existentes, restrições e regras de negócio.
+
+### 🔗 Vínculo com Atendimento
+Compreenda a relação entre solicitações e atendimentos (jobs).
+
+### 📋 Listar Solicitações
+Listagem, filtros, paginação e ordenação de solicitações.
+
+### 🔄 Status da Solicitação
+Todos os possíveis status e transições de uma solicitação.
+
+### 🚦 Status do Atendimento
+Estados e ciclo de vida de um atendimento.
+
+## 📝 Como Contribuir
+
+1. Faça fork do repositório
 2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
 3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
 4. Push para a branch (`git push origin feature/nova-feature`)
 5. Abra um Pull Request
 
-## � Atualizações
+## 🛠️ Tecnologias
 
-Esta documentação está em constante atualização. Verifique regularmente por novas funcionalidades e melhorias.
+- Jekyll (Gerador de sites estáticos)
+- Markdown (Formatação de conteúdo)
+- HTML5 & CSS3 (Interface)
+- JavaScript (Interatividade)
+- GitHub Pages (Hospedagem)
 
-**Última atualização:** Outubro 2025
+## 🔗 Links Úteis
+
+- [GitHub Pages](https://pages.github.com/)
+- [Jekyll Documentation](https://jekyllrb.com/docs/)
+- [Markdown Guide](https://www.markdownguide.org/)
+
+## 📋 Arquivos de Referência
+
+- **_config.yml**: Configurações do Jekyll
 
 ## 📞 Suporte
 
-Para dúvidas ou problemas:
-- Abra uma issue neste repositório
-- Entre em contato com a equipe de desenvolvimento
+Para dúvidas, problemas ou sugestões:
+- 📧 Entre em contato com a equipe de desenvolvimento
+- 🐛 Abra uma issue neste repositório
+- 💬 Consulte a documentação inline
 
 ## 📄 Licença
 
-[Incluir informações de licença apropriadas]
+Este projeto é mantido pela equipe Simcorpi.
 
 ---
 
-**Versão:** 1.0.0
+**Versão:** 1.0.0  
+**Última atualização:** Outubro 2025  
+**Repositório:** [github.com/7itec/simcorpi-tripee_docs](https://github.com/7itec/simcorpi-tripee_docs)
