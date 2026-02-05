@@ -142,6 +142,33 @@ curl -X GET https://api.example.com/tripee/trips/68e64e2d725f5da3cbc613ed \
             "name": "Roberto Souza",
             "phone": "11999999999"
           },
+          "tripulation": [
+            {
+              "name": "JOÃO DA SILVA",
+              "email": "joao.da.silva@empresa.com",
+              "phone": "11999999999",
+              "costCenter": [
+                "A003ADMR01",
+                "AB17RPLL15"
+              ],
+              "pcd": false,
+              "isVip": false,
+              "registrationNumber": 46145810,
+              "department": "COMPARTILHADO/SC/SMOB/GT"
+            },
+            {
+              "name": "MARIA SANTOS",
+              "email": "maria.santos@empresa.com",
+              "phone": "11988887777",
+              "costCenter": [
+                "AB17RPLL15"
+              ],
+              "pcd": false,
+              "isVip": false,
+              "registrationNumber": 46145811,
+              "department": "COMPARTILHADO/SC/SMOB/GT"
+            }
+          ],
           "route": {
             "polyline": "`{viCvou~Gg@AQHo@BWDQT[lDJfBt@zCCxCwAlR]hB}AtCeGpIEf@Rt@^b@BP@`@Wx@e@J_AMoCiCaIoH{ByAs@WsAi@{OaDqG_BwN_DqC]gE?gJ^gDNuAWaED_GK_@@ONC|@Dt@@ZLDNFf@AzGmAvB[zNk@bGSbBDpFdA|b@nJxBr@bBz@nBxAtT|ShTxShj@lh@tDzChCbAlBd@lBNrA@zD[nAYbBq@zA_A|@s@jS_ShBiB~E{FnCeEhAeCpJyVjDsGxC}DdCgCrFmEvNeIvKuFrK}FzKcGb`@wR`P_InEoBvC}@fCg@dIq@xBAbBH~XdC|TrBb[pCxBJfEKzCWhE{@`DgApBaArDaClGyFfMkLlC{C~A{BhCwE|JiRbDwGnAkDhEuPtDsMrIgTnH}Pj[eo@|BoDbDkDlH{Fp]oXnF_EzDaDpWiSdCiBrHoGxDeEzCgErNcXrAoCRINMtBoDnAqAfAc@pCG`BKvB_A~@q@lAm@rA_@pG]hBHtBj@|A~@bD|Bz@hAd@bBb@nDPnAXfCd@pDb@vG`AnNZbG^vDfDxVpA|K|B`SvA|MhBtLbGze@^bDv@|F~@tFZnFJVh@~DFf@z@nHhBvOpD`Y~F|d@nA~K`BhLVnANJzBrQlCdTXrDDtBQpCa@xCAjDXtAd@dAX\\bAl@XH|AB|@QrA}@f@gAPiA@eFf@sDl@kBNa@CS`C_F`C}ElP_]~CoFrCaDxAoAxCqB`EkB~C_AnF{@vDUv\\iBtX}ArDGlG@zDPpGl@zATjEx@rGbB~HnC`i@~QbJjCjATnFp@|Hd@h\\DhNDrC?fFMrGi@tGeAvIgBlQsDrGuA|HuBtGgCrH_EdC_BvE{Cd@MhCwA|HuCxIuBhLuBpZmFvNgCtFu@tFi@pJg@xLMjf@Qhd@YrDYpBWhDw@hBg@nD{AnDuBfCmBhL_JtScPpIcGlK{Fl\\mPrIcEnC}@~Bk@~De@lBKhDGhCEjJMrQ]jJWZJp@FlDIhGa@lGcAtN{ChDy@t@MjASlBD\\D\\FlGvA`R|ErMdEnK|D`LvEj_@rPbLdF`HbEzIvGvNdLpDtCBVf@d@`ChC`@dAXnCTzD@vAWdBgBjDo@hAEX{IhNgK|OmBxCyEtHiFlIMD{@rA{CrEUNm@JuAQ_AMs@Hg@Z_@~@An@`@~EE`AYp@w@jAi@|@y@|@qAb@q@@u@IWMs@c@k@_Ac@sAGo@CwBQQeBj@aDjA"
           }
@@ -169,7 +196,31 @@ Quando um atendimento é vinculado, cada passageiro recebe um objeto `job` com a
 | `endDate` | string (ISO 8601) | Data/hora planejada para término do atendimento (UTC) |
 | `vehicleStamp` | object | Informações do veículo alocado (snapshot) |
 | `driverStamp` | object | Informações do motorista designado (snapshot) |
+| `tripulation` | array | Lista de passageiros no mesmo atendimento (pode englobar passageiros de outras solicitações) |
 | `route` | object | Informações da rota calculada |
+
+---
+
+### 👥 Objeto `tripulation[].job.tripulation`
+
+Esse array representa a **lista de passageiros atendidos por esse mesmo atendimento (job)**.
+
+Uma **solicitação** é a visualização do *pedido* de viagem. Já o **atendimento (job)** é a execução operacional e pode **agrupar mais de uma solicitação** (por exemplo, quando há compartilhamento de veículo/rota).
+
+Por isso, além do passageiro atual `tripulation[]` (da solicitação consultada), o objeto `job.tripulation[]` traz o **contexto completo de quem vai compartilhar essa viagem**.
+
+**Campos esperados (podem variar conforme o cadastro):**
+
+| Campo | Tipo | Descrição |
+|-------|------|-----------|
+| `name` | string | Nome do passageiro |
+| `email` | string | E-mail do passageiro |
+| `phone` | string | Telefone do passageiro (quando disponível) |
+| `registrationNumber` | number | Matrícula/registro do passageiro |
+| `department` | string | Departamento/lotação do passageiro |
+| `costCenter` | array | Centro(s) de custo do passageiro |
+| `pcd` | boolean | Indica se o passageiro é PCD |
+| `isVip` | boolean | Indica se o passageiro é VIP |
 
 ---
 
@@ -295,15 +346,31 @@ Na maioria dos casos, todos os passageiros de uma solicitação compartilham o m
   "tripulation": [
     {
       "name": "João Silva",
-      "job": { "jobId": 2539, "_id": "68e67340..." }
+      "job": {
+        "jobId": 2539,
+        "_id": "68e67340...",
+        "tripulation": [
+          { "name": "João Silva", "registrationNumber": 123 },
+          { "name": "Maria Santos", "registrationNumber": 456 }
+        ]
+      }
     },
     {
       "name": "Maria Santos",
-      "job": { "jobId": 2539, "_id": "68e67340..." }
+      "job": {
+        "jobId": 2539,
+        "_id": "68e67340...",
+        "tripulation": [
+          { "name": "João Silva", "registrationNumber": 123 },
+          { "name": "Maria Santos", "registrationNumber": 456 }
+        ]
+      }
     }
   ]
 }
 ```
+
+**Nota:** quando existir compartilhamento entre solicitações, `job.tripulation[]` pode listar passageiros adicionais (de outras solicitações), mesmo que eles não apareçam em `data.tripulation[]` da solicitação consultada.
 
 ### Cenário Raro: Atendimentos Diferentes
 
