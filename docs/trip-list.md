@@ -341,7 +341,8 @@ requestedFor=[
             "_id": "68e67340a9168dc169f4db46",
             "vehicleStamp": {
               "plate": "ABC1234",
-              "model": "GOL 1.0"
+              "model": "GOL 1.0",
+              "color": "silver"
             },
             "driverStamp": {
               "name": "Roberto Souza",
