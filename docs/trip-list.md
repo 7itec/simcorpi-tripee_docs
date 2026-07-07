@@ -12,6 +12,8 @@ Esta seção detalha como listar e filtrar solicitações de transporte na API, 
 
 A listagem de solicitações permite buscar, filtrar e ordenar todas as solicitações visíveis para o usuário autenticado, seguindo regras específicas de permissão.
 
+Além dos dados principais da solicitação, o retorno pode incluir dados complementares dos passageiros, do atendimento vinculado, do veículo e dos endereços relacionados à viagem.
+
 ---
 
 ## 🔍 Endpoint de Listagem
@@ -335,6 +337,25 @@ requestedFor=[
           "email": "joao.silva@empresa.com",
           "phone": "11999999999",
           "status": "Programada",
+          "role": "Analista",
+          "tripMode": "Requisição de Transporte",
+          "tripObservations": "Observação da solicitação",
+          "tripPlanningCenter": "POOL COMPARTILHADO",
+          "tripCreatedAt": "2026-04-07T15:11:59.932Z",
+          "tripRequestedBy": {
+            "_id": "6447e3292be7586024ed1ed8",
+            "name": "Sistema CICM"
+          },
+          "tripApprovedBy": {
+            "_id": "6447e3292be7586024ed1ed9",
+            "name": "Aprovador CICM"
+          },
+          "originAddress": {
+            "name": "EDISEN"
+          },
+          "destinyAddress": {
+            "name": "EDIHB"
+          },
           "job": {
             "jobId": 2539,
             "status": "Pendente",
@@ -342,12 +363,53 @@ requestedFor=[
             "vehicleStamp": {
               "plate": "ABC1234",
               "model": "GOL 1.0",
-              "color": "silver"
+              "color": "silver",
+              "prefix": "V-001",
+              "monthlyWorkRegime": "12x36",
+              "dailyWorkRegime": "Diurno"
             },
             "driverStamp": {
               "name": "Roberto Souza",
               "phone": "11999999999"
-            }
+            },
+            "createdAt": "2026-04-07T15:11:59.932Z",
+            "requestedByName": "Sistema CICM",
+            "createdAtDateFormatted": "07/04/2026",
+            "createdAtTimeFormatted": "12:11",
+            "startDateFormatted": "13/04/2026",
+            "startTimeFormatted": "07:00",
+            "endDateFormatted": "13/04/2026",
+            "endTimeFormatted": "07:00",
+            "actualStartDate": "2026-05-08T19:55:40.159Z",
+            "actualEndDate": "2026-05-08T20:30:00.000Z",
+            "actualStartDateFormatted": "08/05/2026",
+            "actualStartTimeFormatted": "16:55",
+            "actualEndDateFormatted": "08/05/2026",
+            "actualEndTimeFormatted": "17:30",
+            "observations": "Observação do atendimento",
+            "serviceProvider": "INFOTEC BRASIL",
+            "originAddress": {
+              "name": "EDISEN"
+            },
+            "destinyAddress": {
+              "name": "EDIHB"
+            },
+            "distancePlanned": 4.13,
+            "distanceTraveled": 0,
+            "distanceTraveledGps": 0,
+            "distanceInDisplacement": 0,
+            "distanceInAttendance": 0,
+            "taxiReservationCode": "38927999",
+            "chosenTaxiEstimativeValue": 16.87,
+            "finishedTaxiDataFinalFare": 18.33,
+            "attestedByName": "Usuário Atestador",
+            "csatScore": "N/A",
+            "csatObservation": "N/A",
+            "contractStamp": {
+              "contract": 4600559876
+            },
+            "routePlannedPolyline": "encoded_polyline_value",
+            "routeTraveledPolyline": "encoded_polyline_value"
           }
         }
       ]
