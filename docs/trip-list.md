@@ -400,11 +400,32 @@ requestedFor=[
             "distanceInDisplacement": 0,
             "distanceInAttendance": 0,
             "taxiReservationCode": "38927999",
+            "otherValidTaxiEstimativesValueDetails": [
+              "INFOTEC BRASIL - R$ 16.87",
+              "RJ - HOMOLOGATION 2 - R$ 18.33"
+            ],
+            "cheapestTaxiEstimativeValueDetails": "INFOTEC BRASIL - R$ 16.87",
+            "mostExpensiveTaxiEstimativeValueDetails": "RJ - HOMOLOGATION 2 - R$ 18.33",
             "chosenTaxiEstimativeValue": 16.87,
             "finishedTaxiDataFinalFare": 18.33,
+            "finishedTaxiDataPercentageDiffOfBudgetedAndFinalFaresValue": 8.65,
+            "finishedTaxiDataTollFare": 0,
+            "finishedTaxiDataParkingFare": 0,
             "attestedByName": "Usuário Atestador",
+            "contestedBy": {
+              "_id": "6447e3292be7586024ed1ed7",
+              "name": "Usuário Contestador"
+            },
             "csatScore": "N/A",
             "csatObservation": "N/A",
+            "b1Name": "Taxi Comun",
+            "b1InitialFare": 5,
+            "b1AdditionalFare": 2.99,
+            "b1TotalFare": 16.87,
+            "b2Name": "N/A",
+            "b2InitialFare": "N/A",
+            "b2AdditionalFare": "N/A",
+            "b2TotalFare": "N/A",
             "contractStamp": {
               "contract": 4600559876
             },
