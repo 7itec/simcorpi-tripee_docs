@@ -371,6 +371,9 @@ requestedFor=[
             "driverStamp": {
               "name": "Roberto Souza",
               "phone": "11999999999"
+              "profilePicture": {
+                "url": "https://example.com/driver.png"
+              }
             },
             "createdAt": "2026-04-07T15:11:59.932Z",
             "requestedByName": "Sistema CICM",
