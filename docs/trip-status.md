@@ -130,8 +130,10 @@ O status da solicitação representa o estado atual do pedido de transporte no s
         "status": "Pendente",
         "vehicleStamp": {
           "plate": "ABC1234",
-          "model": "GOL 1.0"
+          "model": "GOL 1.0",
+          "numberOfPassengers": 15
         },
+        "numberOfPassengersConfirmed": 8,
         "driverStamp": {
           "name": "Roberto Souza",
           "phone": "11999999999"

@@ -14,6 +14,8 @@ A listagem de solicitações permite buscar, filtrar e ordenar todas as solicita
 
 Além dos dados principais da solicitação, o retorno pode incluir dados complementares dos passageiros, do atendimento vinculado, do veículo e dos endereços relacionados à viagem.
 
+> **Capacidade e confirmação de presença:** os campos `vehicleStamp.numberOfPassengers` e `numberOfPassengersConfirmed` estão disponíveis no **detalhe** da solicitação (`GET /tripee/trips/:id`). Veja a documentação completa em [Vínculo com Atendimento](trip-job-link.md).
+
 ---
 
 ## 🔍 Endpoint de Listagem
@@ -370,7 +372,7 @@ requestedFor=[
             },
             "driverStamp": {
               "name": "Roberto Souza",
-              "phone": "11999999999"
+              "phone": "11999999999",
               "profilePicture": {
                 "url": "https://example.com/driver.png"
               }

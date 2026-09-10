@@ -33,8 +33,11 @@ Utilize o menu de **Documentação** acima para navegar entre os diferentes recu
 | `POST` | `/tripee/trips/personnel` | Criar nova solicitação |
 | `PATCH` | `/tripee/trips/:id/personnel` | Editar solicitação existente |
 | `GET` | `/tripee/trips/personnel` | Listar solicitações com filtros |
+| `GET` | `/tripee/trips/fixed-routes` | Listar solicitações de rota fixa do passageiro |
 | `GET` | `/tripee/trips/:id` | Buscar solicitação por ID |
 | `PATCH` | `/tripee/trips/:id/cancel` | Cancelar solicitação |
+| `PATCH` | `/tripee/trips/:id/confirm-presence` | Confirmar presença (rota fixa) |
+| `PATCH` | `/tripee/trips/:id/cancel-reservation` | Cancelar reserva (rota fixa) |
 
 ### 💰 Centros de Custo
 

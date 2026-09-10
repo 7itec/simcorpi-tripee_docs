@@ -71,8 +71,10 @@ O status do atendimento representa o estado atual da **execução** da viagem. E
         "endDate": "2025-11-24T15:12:29.000Z",
         "vehicleStamp": {
           "plate": "ABC1234",
-          "model": "GOL 1.0"
+          "model": "GOL 1.0",
+          "numberOfPassengers": 15
         },
+        "numberOfPassengersConfirmed": 8,
         "driverStamp": {
           "name": "Roberto Souza",
           "phone": "11999999999"
@@ -116,8 +118,10 @@ O status do atendimento representa o estado atual da **execução** da viagem. E
         "_id": "68e67340a9168dc169f4db46",
         "vehicleStamp": {
           "plate": "ABC1234",
-          "model": "GOL 1.0"
+          "model": "GOL 1.0",
+          "numberOfPassengers": 15
         },
+        "numberOfPassengersConfirmed": 8,
         "driverStamp": {
           "name": "Roberto Souza",
           "phone": "11999999999"
@@ -162,8 +166,10 @@ O status do atendimento representa o estado atual da **execução** da viagem. E
         "_id": "68e67340a9168dc169f4db46",
         "vehicleStamp": {
           "plate": "ABC1234",
-          "model": "GOL 1.0"
+          "model": "GOL 1.0",
+          "numberOfPassengers": 15
         },
+        "numberOfPassengersConfirmed": 8,
         "driverStamp": {
           "name": "Roberto Souza",
           "phone": "11999999999"
@@ -216,8 +222,10 @@ O status do atendimento representa o estado atual da **execução** da viagem. E
         "_id": "68e67340a9168dc169f4db46",
         "vehicleStamp": {
           "plate": "ABC1234",
-          "model": "GOL 1.0"
+          "model": "GOL 1.0",
+          "numberOfPassengers": 15
         },
+        "numberOfPassengersConfirmed": 8,
         "driverStamp": {
           "name": "Roberto Souza",
           "phone": "11999999999"
@@ -264,8 +272,10 @@ O status do atendimento representa o estado atual da **execução** da viagem. E
         "_id": "68e67340a9168dc169f4db46",
         "vehicleStamp": {
           "plate": "ABC1234",
-          "model": "GOL 1.0"
+          "model": "GOL 1.0",
+          "numberOfPassengers": 15
         },
+        "numberOfPassengersConfirmed": 8,
         "driverStamp": {
           "name": "Roberto Souza",
           "phone": "11999999999"
@@ -312,8 +322,10 @@ O status do atendimento representa o estado atual da **execução** da viagem. E
         "_id": "68e67340a9168dc169f4db46",
         "vehicleStamp": {
           "plate": "ABC1234",
-          "model": "GOL 1.0"
+          "model": "GOL 1.0",
+          "numberOfPassengers": 15
         },
+        "numberOfPassengersConfirmed": 8,
         "driverStamp": {
           "name": "Roberto Souza",
           "phone": "11999999999"
@@ -360,8 +372,10 @@ O status do atendimento representa o estado atual da **execução** da viagem. E
         "_id": "68e67340a9168dc169f4db46",
         "vehicleStamp": {
           "plate": "ABC1234",
-          "model": "GOL 1.0"
+          "model": "GOL 1.0",
+          "numberOfPassengers": 15
         },
+        "numberOfPassengersConfirmed": 8,
         "driverStamp": {
           "name": "Roberto Souza",
           "phone": "11999999999"
@@ -407,8 +421,10 @@ O status do atendimento representa o estado atual da **execução** da viagem. E
         "_id": "68e67340a9168dc169f4db46",
         "vehicleStamp": {
           "plate": "ABC1234",
-          "model": "GOL 1.0"
+          "model": "GOL 1.0",
+          "numberOfPassengers": 15
         },
+        "numberOfPassengersConfirmed": 8,
         "driverStamp": {
           "name": "Roberto Souza",
           "phone": "11999999999"
