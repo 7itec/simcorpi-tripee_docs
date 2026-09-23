@@ -41,7 +41,10 @@ simcorpi-tripee_docss/
 │   ├── trip-job-link.md
 │   ├── trip-list.md
 │   ├── trip-status.md
-│   └── job-status.md
+│   ├── job-status.md
+│   ├── csats-and-attests.md
+│   ├── csat.md
+│   └── attest.md
 ├── index.md          # Página inicial
 ├── _config.yml       # Configuração do Jekyll
 └── Gemfile          # Dependências Ruby
@@ -105,6 +108,15 @@ Todos os possíveis status e transições de uma solicitação.
 ### 🚦 Status do Atendimento
 Estados e ciclo de vida de um atendimento.
 
+### ⭐ CSAT e Atestes Pendentes
+Listagem paginada de atendimentos com pesquisa de satisfação e/ou ateste pendentes.
+
+### 📝 Responder CSAT
+Como enviar a resposta da pesquisa de satisfação (nota geral ou por tópicos).
+
+### ✔️ Ateste e Contestação
+Confirmação e contestação do ateste de atendimentos finalizados.
+
 ## 📝 Como Contribuir
 
 1. Faça fork do repositório
@@ -144,6 +156,6 @@ Este projeto é mantido pela equipe Simcorpi.
 
 ---
 
-**Versão:** 1.0.0  
-**Última atualização:** Outubro 2025  
+**Versão:** 1.1.0  
+**Última atualização:** Setembro 2026  
 **Repositório:** [github.com/7itec/simcorpi-tripee_docs](https://github.com/7itec/simcorpi-tripee_docs)

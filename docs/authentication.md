@@ -110,4 +110,4 @@ curl -X GET https://api.example.com/tripee/planning-centers/all \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 ```
 
-**Próximo:** [Criação de Solicitações →](trip-creation.md) | [Edição de Solicitações →](trip-edit.md) | [Vínculo com Atendimento →](trip-job-link.md) | [Status da Solicitação →](trip-status.md)
+**Próximo:** [Criação de Solicitações →](trip-creation.md) | [Edição de Solicitações →](trip-edit.md) | [Vínculo com Atendimento →](trip-job-link.md) | [CSAT e Atestes →](csats-and-attests.md) | [Status da Solicitação →](trip-status.md)

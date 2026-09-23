@@ -39,6 +39,15 @@ Utilize o menu de **Documentação** acima para navegar entre os diferentes recu
 | `PATCH` | `/tripee/trips/:id/confirm-presence` | Confirmar presença (rota fixa) |
 | `PATCH` | `/tripee/trips/:id/cancel-reservation` | Cancelar reserva (rota fixa) |
 
+### ⭐ CSAT e Atestes
+
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| `GET` | `/tripee/trips/csats-and-attests` | Listar atendimentos com CSAT e/ou ateste pendentes |
+| `POST` | `/tripee/csats` | Responder pesquisa de satisfação |
+| `PATCH` | `/tripee/alerts/:id/attest/confirm` | Confirmar ateste do atendimento |
+| `PATCH` | `/tripee/alerts/:id/attest/contest` | Contestar ateste do atendimento |
+
 ### 💰 Centros de Custo
 
 | Método | Endpoint | Descrição |
