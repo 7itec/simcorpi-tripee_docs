@@ -39,6 +39,12 @@ Utilize o menu de **Documentação** acima para navegar entre os diferentes recu
 | `PATCH` | `/tripee/trips/:id/confirm-presence` | Confirmar presença (rota fixa) |
 | `PATCH` | `/tripee/trips/:id/cancel-reservation` | Cancelar reserva (rota fixa) |
 
+### 📍 Posições dos Veículos
+
+| Recurso | Nome | Descrição |
+|---------|------|-----------|
+| Fila RabbitMQ | `positions` | Posições em tempo real enviadas pelo aplicativo do motorista ([detalhes](docs/positions-queue.html)) |
+
 ### ⭐ CSAT e Atestes
 
 | Método | Endpoint | Descrição |

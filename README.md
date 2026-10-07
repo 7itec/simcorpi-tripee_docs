@@ -42,6 +42,7 @@ simcorpi-tripee_docss/
 │   ├── trip-list.md
 │   ├── trip-status.md
 │   ├── job-status.md
+│   ├── positions-queue.md
 │   ├── csats-and-attests.md
 │   ├── csat.md
 │   └── attest.md
