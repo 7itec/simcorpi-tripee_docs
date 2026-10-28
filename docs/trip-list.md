@@ -332,43 +332,69 @@ requestedFor=[
         "_id": "6447e3292be7586024ed1ed8",
         "name": "Wilson Jnr"
       },
+      "approvedBy": {
+        "name": "Aprovador CICM",
+        "department": "COMPARTILHADO/SC/SMOB/GT"
+      },
+      "createdBy": {
+        "_id": "6447e3292be7586024ed1ed8",
+        "name": "Wilson Jnr",
+        "registrationNumber": 46145811,
+        "companyAcronym": "PETROBRAS"
+      },
+      "costEstimate": {
+        "value": 89.9,
+        "currency": "BRL",
+        "estimatedKm": 12.5
+      },
       "tripulation": [
         {
           "name": "João Silva",
           "registrationNumber": 46145810,
           "email": "joao.silva@empresa.com",
           "phone": "11999999999",
-          "status": "Programada",
-          "role": "Analista",
-          "tripMode": "Requisição de Transporte",
-          "tripObservations": "Observação da solicitação",
-          "tripPlanningCenter": "POOL COMPARTILHADO",
-          "tripCreatedAt": "2026-04-07T15:11:59.932Z",
-          "tripRequestedBy": {
-            "_id": "6447e3292be7586024ed1ed8",
-            "name": "Sistema CICM"
-          },
-          "tripApprovedBy": {
-            "_id": "6447e3292be7586024ed1ed9",
-            "name": "Aprovador CICM"
-          },
+          "department": "COMPARTILHADO/SC/SMOB/GT",
+          "costCenter": ["A003ADMR01"],
+          "pcd": false,
+          "isVip": false,
+          "companyAcronym": "PETROBRAS",
+          "identityKey": "PETROBRAS:46145810",
           "originAddress": {
-            "name": "EDISEN"
+            "street": "RUA SEIS",
+            "streetNumber": "2250",
+            "neighborhood": "BONFIM",
+            "city": "PAULÍNIA",
+            "state": "SÃO PAULO",
+            "uf": "SP",
+            "zipcode": "13147-030",
+            "latitude": -22.73217,
+            "longitude": -47.13737
           },
           "destinyAddress": {
-            "name": "EDIHB"
+            "street": "RODOVIA SANTOS DUMONT",
+            "streetNumber": "KM 66",
+            "neighborhood": "PARQUE VIRACOPOS",
+            "city": "CAMPINAS",
+            "state": "SÃO PAULO",
+            "uf": "SP",
+            "zipcode": "13055-900",
+            "latitude": -23.0080502,
+            "longitude": -47.1396595
           },
           "job": {
+            "_id": "68e67340a9168dc169f4db46",
             "jobId": 2539,
             "status": "Pendente",
-            "_id": "68e67340a9168dc169f4db46",
+            "startDate": "2025-11-24T14:30:00.000Z",
+            "endDate": "2025-11-24T15:12:29.000Z",
             "vehicleStamp": {
               "plate": "ABC1234",
               "model": "GOL 1.0",
               "color": "silver",
-              "prefix": "V-001",
-              "monthlyWorkRegime": "12x36",
-              "dailyWorkRegime": "Diurno"
+              "recentPosition": {
+                "latitude": -22.73,
+                "longitude": -47.13
+              }
             },
             "driverStamp": {
               "name": "Roberto Souza",
@@ -377,65 +403,9 @@ requestedFor=[
                 "url": "https://example.com/driver.png"
               }
             },
-            "createdAt": "2026-04-07T15:11:59.932Z",
-            "requestedByName": "Sistema CICM",
-            "createdAtDateFormatted": "07/04/2026",
-            "createdAtTimeFormatted": "12:11",
-            "startDateFormatted": "13/04/2026",
-            "startTimeFormatted": "07:00",
-            "endDateFormatted": "13/04/2026",
-            "endTimeFormatted": "07:00",
-            "actualStartDate": "2026-05-08T19:55:40.159Z",
-            "actualEndDate": "2026-05-08T20:30:00.000Z",
-            "actualStartDateFormatted": "08/05/2026",
-            "actualStartTimeFormatted": "16:55",
-            "actualEndDateFormatted": "08/05/2026",
-            "actualEndTimeFormatted": "17:30",
-            "observations": "Observação do atendimento",
-            "serviceProvider": "INFOTEC BRASIL",
-            "originAddress": {
-              "name": "EDISEN"
-            },
-            "destinyAddress": {
-              "name": "EDIHB"
-            },
-            "distancePlanned": 4.13,
-            "distanceTraveled": 0,
-            "distanceTraveledGps": 0,
-            "distanceInDisplacement": 0,
-            "distanceInAttendance": 0,
-            "taxiReservationCode": "38927999",
-            "otherValidTaxiEstimativesValueDetails": [
-              "INFOTEC BRASIL - R$ 16.87",
-              "RJ - HOMOLOGATION 2 - R$ 18.33"
-            ],
-            "cheapestTaxiEstimativeValueDetails": "INFOTEC BRASIL - R$ 16.87",
-            "mostExpensiveTaxiEstimativeValueDetails": "RJ - HOMOLOGATION 2 - R$ 18.33",
-            "chosenTaxiEstimativeValue": 16.87,
-            "finishedTaxiDataFinalFare": 18.33,
-            "finishedTaxiDataPercentageDiffOfBudgetedAndFinalFaresValue": 8.65,
-            "finishedTaxiDataTollFare": 0,
-            "finishedTaxiDataParkingFare": 0,
-            "attestedByName": "Usuário Atestador",
-            "contestedBy": {
-              "_id": "6447e3292be7586024ed1ed7",
-              "name": "Usuário Contestador"
-            },
-            "csatScore": "N/A",
-            "csatObservation": "N/A",
-            "b1Name": "Taxi Comun",
-            "b1InitialFare": 5,
-            "b1AdditionalFare": 2.99,
-            "b1TotalFare": 16.87,
-            "b2Name": "N/A",
-            "b2InitialFare": "N/A",
-            "b2AdditionalFare": "N/A",
-            "b2TotalFare": "N/A",
-            "contractStamp": {
-              "contract": 4600559876
-            },
-            "routePlannedPolyline": "encoded_polyline_value",
-            "routeTraveledPolyline": "encoded_polyline_value"
+            "route": {
+              "polyline": "encoded_polyline_value"
+            }
           }
         }
       ]
@@ -446,6 +416,78 @@ requestedFor=[
   "currentPage": 0
 }
 ```
+
+> Campos sem valor na solicitação (ex.: solicitação sem aprovador, passageiro sem atendimento vinculado) **não aparecem** no objeto. Trate todos como opcionais.
+
+---
+
+## 📚 Campos Retornados
+
+A listagem devolve um conjunto **reduzido** de campos. Para os dados completos do atendimento (datas formatadas, distâncias, táxi, CSAT, observações do atendimento, capacidade etc.), use o detalhe `GET /tripee/trips/:id` — veja [Vínculo com Atendimento](trip-job-link.md).
+
+### Raiz da solicitação (`data[]`)
+
+| Campo | Tipo | Descrição |
+|-------|------|-----------|
+| `_id` | string | ID único da solicitação |
+| `tripId` | number | Número da solicitação para exibição |
+| `status` | string | Status da solicitação (ver [Status da Solicitação](trip-status.md)) |
+| `mode` | string | Tipo da viagem |
+| `observations` | string | Observações da **solicitação** |
+| `planningCenter` | string | Centro de planejamento |
+| `requestUserTimezone` | string | Fuso horário do solicitante (ex.: `-03:00`) |
+| `requestedFor` | string (ISO 8601) | Data/hora solicitada (UTC) |
+| `createdAt` / `updatedAt` | string (ISO 8601) | Datas de criação e atualização |
+| `files[].url` | string | URL dos anexos |
+| `requestedBy` | object | Solicitante (`_id`, `name`) |
+| `createdBy` | object | Usuário que criou a solicitação (`_id`, `name`, `registrationNumber`, `companyAcronym`) |
+| `approvedBy` | object | Aprovador da solicitação (`name`, `department`) — ver abaixo |
+| `costEstimate` | object | Estimativa de custo (`value`, `currency` = `BRL`, `estimatedKm`), quando houver |
+| `tripulation` | array | Passageiros da solicitação |
+
+### ✅ Aprovador da solicitação (`approvedBy`)
+
+Identifica quem aprovou a solicitação no Simcorpi.
+
+| Campo | Tipo | Descrição |
+|-------|------|-----------|
+| `approvedBy.name` | string | Nome de quem aprovou a solicitação |
+| `approvedBy.department` | string | Gerência de quem aprovou a solicitação |
+
+**⚠️ Importante:**
+- O objeto só existe quando a solicitação foi **aprovada manualmente** por um aprovador. Solicitações aprovadas automaticamente (sem etapa de aprovação) **não** possuem `approvedBy`.
+- A gerência (`department`) é registrada no **momento da aprovação**. Se o aprovador mudar de gerência depois, o valor não é atualizado.
+
+### Passageiro (`tripulation[]`)
+
+| Campo | Tipo | Descrição |
+|-------|------|-----------|
+| `name` / `email` / `phone` | string | Dados de contato do passageiro |
+| `registrationNumber` | number | Matrícula |
+| `department` | string | Gerência do passageiro |
+| `costCenter` | array | Objeto(s) de custo |
+| `pcd` | boolean | Indica se é PCD |
+| `isVip` | boolean | Indica se é VIP (cargo de alta administração) |
+| `companyAcronym` | string | Sigla da empresa do passageiro |
+| `identityKey` | string | Chave única do passageiro no formato `SIGLA_EMPRESA:MATRÍCULA` (ou só a matrícula, sem sigla) |
+| `originAddress` / `destinyAddress` | object | Endereços (`street`, `streetNumber`, `neighborhood`, `city`, `state`, `uf`, `zipcode`, `latitude`, `longitude`) |
+| `job` | object | Atendimento vinculado (quando existir) |
+
+### Atendimento (`tripulation[].job`)
+
+| Campo | Tipo | Descrição |
+|-------|------|-----------|
+| `_id` | string | ID único do atendimento |
+| `jobId` | number | Número do atendimento para exibição |
+| `status` | string | Status do atendimento (ver [Status do Atendimento](job-status.md)) |
+| `startDate` / `endDate` | string (ISO 8601) | Início/fim planejados (UTC) |
+| `vehicleStamp` | object | Veículo (`plate`, `model`, `color`, `recentPosition`) |
+| `driverStamp` | object | Motorista (`name`, `phone`, `profilePicture.url`) |
+| `route.polyline` | string | Rota planejada (Google Encoded Polyline) |
+
+**💡 Rotas fixas:** `GET /tripee/trips/fixed-routes` usa um formato semelhante e acrescenta no `job` os campos `fixedRoute` (`title`, `isReturn`) e `stops` (paradas com flags de embarque/desembarque do usuário).
+
+**💡 Webhook:** o payload que o Simcorpi envia para a Tripee a cada atualização segue este mesmo formato, com campos adicionais de execução do atendimento (incluindo as observações do atendimento). Veja [Webhook de Atualização](webhook.md).
 
 ---
 

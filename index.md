@@ -39,6 +39,12 @@ Utilize o menu de **Documentação** acima para navegar entre os diferentes recu
 | `PATCH` | `/tripee/trips/:id/confirm-presence` | Confirmar presença (rota fixa) |
 | `PATCH` | `/tripee/trips/:id/cancel-reservation` | Cancelar reserva (rota fixa) |
 
+### 🔔 Webhook de Atualização
+
+| Recurso | Nome | Descrição |
+|---------|------|-----------|
+| Webhook (Simcorpi → Tripee) | `POST` na URL configurada para a Tripee | Estado completo da solicitação enviado a cada mudança de status, atendimento ou posição ([detalhes](docs/webhook.html)) |
+
 ### 📍 Posições dos Veículos
 
 | Recurso | Nome | Descrição |

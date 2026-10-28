@@ -96,7 +96,8 @@ curl -X GET https://api.example.com/tripee/trips/68e64e2d725f5da3cbc613ed \
     "updatedAt": "2025-10-08T14:20:50.433Z",
     "approvedBy": {
       "_id": "6447e3292be7586024ed1ed9",
-      "name": "Aprovador CICM"
+      "name": "Aprovador CICM",
+      "department": "COMPARTILHADO/SC/SMOB/GT"
     },
     "files": [
       {
@@ -322,7 +323,7 @@ curl -X GET https://api.example.com/tripee/trips/68e64e2d725f5da3cbc613ed \
 | `requestUserTimezone` | string | Fuso horário do solicitante (ex.: `-03:00`) |
 | `requestedFor` | string (ISO 8601) | Data/hora solicitada (UTC) |
 | `createdAt` / `updatedAt` | string (ISO 8601) | Datas de criação e atualização |
-| `approvedBy` | object | Aprovador (`_id`, `name`), quando houver |
+| `approvedBy` | object | Aprovador (`_id`, `name`, `department` = gerência no momento da aprovação). Ausente em solicitações aprovadas automaticamente |
 | `files` | array | Anexos (`url`) |
 | `requestedBy` | object | Solicitante (`_id`, `name`) |
 | `tripulation` | array | Passageiro(s) retornados para o usuário autenticado |
