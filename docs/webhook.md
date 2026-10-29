@@ -175,6 +175,8 @@ O corpo segue o mesmo formato do item da [listagem de solicitações](trip-list.
 
 > Campos sem valor (ex.: solicitação sem aprovador, passageiro sem atendimento, atendimento ainda não finalizado) **não aparecem** no payload. Trate todos como opcionais.
 
+> O exemplo acima é de uma corrida de táxi e, por isso, não traz `job.providerCompanyLogoUrl`. Em atendimentos nativos (`DEDICADO`, `COLETIVO`, `POOL`, `EVENTUAL`, `DESLOCAMENTO`) cujo veículo pertence a uma empresa com logomarca cadastrada, o `job` inclui esse campo com a URL da logo — veja [Listar Solicitações](trip-list.md#-logomarca-da-empresa-operadora-jobprovidercompanylogourl).
+
 ---
 
 ## 📚 Campos exclusivos do webhook

@@ -178,6 +178,7 @@ curl -X GET https://api.example.com/tripee/trips/68e64e2d725f5da3cbc613ed \
           "actualEndTimeFormatted": null,
           "observations": "Observação do atendimento",
           "serviceProvider": "INFOTEC BRASIL",
+          "providerCompanyLogoUrl": "https://cicmpetrobras.blob.core.windows.net/companies/logo.png",
           "serviceType": "COLETIVO",
           "contractStamp": {
             "contract": 4600559876
@@ -370,6 +371,7 @@ Quando um atendimento é vinculado, cada passageiro recebe um objeto `job` com a
 | `requestedByName` | string | Nome de quem solicitou o atendimento |
 | `observations` | string | Observações do atendimento |
 | `serviceProvider` | string | Prestador de serviço |
+| `providerCompanyLogoUrl` | string | URL da logomarca da empresa dona do veículo do atendimento (em `EVENTUAL` sem veículo, da empresa solicitante). Ausente sem logo cadastrada ou em táxi/Uber via integração (ver [Listar Solicitações](trip-list.md#-logomarca-da-empresa-operadora-jobprovidercompanylogourl)) |
 | `serviceType` | string | Tipo de serviço (ex.: `COLETIVO`, `EMPRESARIAL`, `TAXI`) |
 | `contractStamp` | object | Snapshot do contrato |
 | `originAddress` / `destinyAddress` | object | Endereços raiz do atendimento |

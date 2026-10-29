@@ -387,6 +387,7 @@ requestedFor=[
             "status": "Pendente",
             "startDate": "2025-11-24T14:30:00.000Z",
             "endDate": "2025-11-24T15:12:29.000Z",
+            "providerCompanyLogoUrl": "https://cicmpetrobras.blob.core.windows.net/companies/logo.png",
             "vehicleStamp": {
               "plate": "ABC1234",
               "model": "GOL 1.0",
@@ -481,9 +482,19 @@ Identifica quem aprovou a solicitação no Simcorpi.
 | `jobId` | number | Número do atendimento para exibição |
 | `status` | string | Status do atendimento (ver [Status do Atendimento](job-status.md)) |
 | `startDate` / `endDate` | string (ISO 8601) | Início/fim planejados (UTC) |
+| `providerCompanyLogoUrl` | string | URL da logomarca da empresa que opera o atendimento — ver abaixo |
 | `vehicleStamp` | object | Veículo (`plate`, `model`, `color`, `recentPosition`) |
 | `driverStamp` | object | Motorista (`name`, `phone`, `profilePicture.url`) |
 | `route.polyline` | string | Rota planejada (Google Encoded Polyline) |
+
+### 🏢 Logomarca da empresa operadora (`job.providerCompanyLogoUrl`)
+
+URL pública da imagem da logomarca da empresa dona do **veículo** alocado ao atendimento, para exibir no detalhe do atendimento.
+
+**⚠️ Importante:**
+- Disponível para atendimentos nativos do Simcorpi (`DEDICADO`, `COLETIVO`, `POOL`, `EVENTUAL`, `DESLOCAMENTO`), inclusive rotas fixas.
+- Em atendimentos `EVENTUAL` ainda sem veículo, a URL é a da **empresa solicitante**; ela passa a ser a da empresa do veículo quando o veículo é vinculado.
+- O campo **não aparece** quando a empresa não tem logomarca cadastrada, em corridas de táxi/Uber via integração ou em atendimentos sem logomarca registrada (ex.: criados antes da disponibilização do recurso).
 
 **💡 Rotas fixas:** `GET /tripee/trips/fixed-routes` usa um formato semelhante e acrescenta no `job` os campos `fixedRoute` (`title`, `isReturn`) e `stops` (paradas com flags de embarque/desembarque do usuário).
 
